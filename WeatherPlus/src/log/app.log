@@ -1,0 +1,73 @@
+2023-12-14 09:25:32,955 INFO c.w.W.WeatherPlusApplication [main] Starting WeatherPlusApplication using Java 21.0.1 with PID 6781 (/home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus/target/classes started by saveliy in /home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus)
+2023-12-14 09:25:32,956 INFO c.w.W.WeatherPlusApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:25:33,167 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-14 09:25:33,195 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2023-12-14 09:25:33,382 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-14 09:25:33,409 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-14 09:25:33,411 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-14 09:25:33,554 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-14 09:25:33,567 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-14 09:25:33,630 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f2466c
+2023-12-14 09:25:33,631 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-14 09:25:33,653 WARN o.h.o.deprecation [main] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-14 09:25:33,653 WARN o.h.o.deprecation [main] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-14 09:25:34,136 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-14 09:25:34,161 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-14 09:25:35,352 INFO c.w.W.WeatherPlusApplication [main] Started WeatherPlusApplication in 2.572 seconds (process running for 3.066)
+2023-12-14 09:25:38,143 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
+2023-12-14 09:25:40,367 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
+2023-12-14 09:25:41,286 ERROR o.t.t.u.DefaultBotSession [WeatherPlusPlusBot Telegram Executor] java.io.FileNotFoundException: http://api.openweathermap.org/data/2.5/weather?q=London,ru&APPID=1ad07f1a062c4944c991c676c873d2c3
+java.lang.RuntimeException: java.io.FileNotFoundException: http://api.openweathermap.org/data/2.5/weather?q=London,ru&APPID=1ad07f1a062c4944c991c676c873d2c3
+	at com.weather.WeatherPlus.service.TelegramBot.onUpdateReceived(TelegramBot.java:209)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+Caused by: java.io.FileNotFoundException: http://api.openweathermap.org/data/2.5/weather?q=London,ru&APPID=1ad07f1a062c4944c991c676c873d2c3
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1994)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599)
+	at com.weather.WeatherPlus.network.HttpClient.getUrlContent(HttpClient.java:14)
+	at com.weather.WeatherPlus.checkers.CityNameChecker.isCity(CityNameChecker.java:16)
+	at com.weather.WeatherPlus.service.TelegramBot.onUpdateReceived(TelegramBot.java:188)
+	... 3 common frames omitted
+2023-12-14 09:27:26,960 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-14 09:27:26,961 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-14 09:27:26,963 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-12-14 09:27:29,943 INFO c.w.W.WeatherPlusApplication [main] Starting WeatherPlusApplication using Java 21.0.1 with PID 6915 (/home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus/target/classes started by saveliy in /home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus)
+2023-12-14 09:27:29,944 INFO c.w.W.WeatherPlusApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:27:30,176 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-14 09:27:30,207 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2023-12-14 09:27:30,411 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-14 09:27:30,440 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-14 09:27:30,441 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-14 09:27:30,591 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-14 09:27:30,605 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-14 09:27:30,672 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f2466c
+2023-12-14 09:27:30,673 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-14 09:27:30,696 WARN o.h.o.deprecation [main] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-14 09:27:30,696 WARN o.h.o.deprecation [main] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-14 09:27:31,218 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-14 09:27:31,247 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-14 09:27:32,588 INFO c.w.W.WeatherPlusApplication [main] Started WeatherPlusApplication in 2.827 seconds (process running for 3.286)
+2023-12-14 09:27:35,373 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
+2023-12-14 09:27:38,423 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
+2023-12-14 09:27:47,542 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-14 09:27:47,543 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-14 09:27:47,545 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-12-14 09:27:49,876 INFO c.w.W.WeatherPlusApplication [main] Starting WeatherPlusApplication using Java 21.0.1 with PID 7030 (/home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus/target/classes started by saveliy in /home/saveliy/IdeaProjects/TG_BOTS/papka/WeatherPLUSTGBOT/WeatherPlus)
+2023-12-14 09:27:49,877 INFO c.w.W.WeatherPlusApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:27:50,105 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-14 09:27:50,133 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2023-12-14 09:27:50,341 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-14 09:27:50,369 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-14 09:27:50,371 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-12-14 09:27:50,522 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-14 09:27:50,535 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-14 09:27:50,599 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f2466c
+2023-12-14 09:27:50,600 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-14 09:27:50,622 WARN o.h.o.deprecation [main] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-14 09:27:50,623 WARN o.h.o.deprecation [main] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-12-14 09:27:51,156 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-14 09:27:51,183 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-14 09:27:52,456 INFO c.w.W.WeatherPlusApplication [main] Started WeatherPlusApplication in 2.767 seconds (process running for 3.206)
+2023-12-14 09:27:53,735 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
+2023-12-14 09:27:56,441 INFO c.w.W.s.TelegramBot [WeatherPlusPlusBot Telegram Executor] update on
